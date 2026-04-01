@@ -4,20 +4,9 @@ from pydantic import BaseModel, Field, model_validator
 
 
 class SchoolNote(BaseModel):
-    student_first_name: str = Field(description="Student's first name")
-    student_last_name: str = Field(description="Student's last name")
     school_name: str = Field(description="Name of the school")
-    grade: str = Field(description="Grade level, e.g. '5th', '10th'")
-    absence_date: str = Field(
-        description="Date or date range of absence in YYYY-MM-DD format"
-    )
-    reason: str = Field(description="Reason for the absence")
-    parent_guardian_name: str = Field(
-        description="Full name of the parent or guardian"
-    )
-    additional_notes: str | None = Field(
-        default=None, description="Any additional context or requests"
-    )
+    reason_for_absence: str = Field(description="Reason for the absence")
+    date_of_return: str = Field(description="Date of return to school")
 
 
 class PopulateResult(BaseModel):
