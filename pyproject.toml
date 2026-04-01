@@ -1,0 +1,13 @@
+[project]
+name = "school-note-2026"
+version = "0.1.0"
+description = "Template populator for school absence notes"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "instructor",
+    "boto3",
+    "pydantic",
+]
